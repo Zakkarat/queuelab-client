@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oleo+Script&family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
+    />
+    <link rel="stylesheet" href="./css/stylesIndex.css" />
+    <link rel="stylesheet" href="./css/stylesAuth.css" />
+    <title>Queuelab</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="header">
+        <a href="./index.html" class="logo">QUEUELAB</a>
+        <ul class="list">
+          <li class="item">
+            <a href="./index.html" class="btn">Головна сторінка</a>
+          </li>
+          <li class="item">
+            <a href="./info-page.html" class="btn">Інформація</a>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <main class="main">
+      <div class="block">
+        <div class="flex">
+          <img
+            src="./images/pocherhachTree.svg"
+            alt="pocherhachTree"
+            class="img"
+          />
+          <p class="text">
+            Мене звати Почергач. Я допоможу тобі у процесі заняття черги. Спершу
+            тобі треба ввести свої дані та групу, щоб я міг знайти твій розклад.
+          </p>
+        </div>
+        <form class="form">
+          <label class="form-field">
+            <div class="form-flex">
+              <span class="form-label">Ім'я</span>
+              <input
+                class="form-input"
+                type="text"
+                name="first_name"
+                autocomplete="given-name"
+              />
+            </div>
+          </label>
+          <label class="form-field"
+            ><div class="form-flex">
+              <span class="form-label">Прізвище</span>
+              <input
+                class="form-input"
+                type="text"
+                name="last_name"
+                autocomplete="family-name"
+              /></div
+          ></label>
+          <label class="form-field">
+            <div class="form-flex">
+              <span class="form-label">Група</span
+              ><input class="form-input" type="text" name="group" /></div
+          ></label>
+          <label class="form-field">
+            <div class="form-flex">
+              <span class="form-label">Пароль</span
+              ><input class="form-input" type="password" name="password" /></div
+          ></label>
+          <div class="flex-down">
+            <a href="" class="pas">
+              <svg class="svg-img" width="30px" height="30px">
+                <use href="./images/sprite.svg#question"></use>
+              </svg>
+              Забули пароль?
+            </a>
+
+            <button type="submit" class="btn">
+              <a href="./account.html" class="link">Увійти</a>
+            </button>
+          </div>
+        </form>
+      </div>
+    </main>
+    <footer class="footer">
+      <ul class="list">
+        <li class="item">
+          <svg class="svg-img" width="30px" height="30px">
+            <use href="./images/sprite.svg#phone"></use>
+          </svg>
+          Телефон: <a class="link" href="tel:+38000000000">+380(00)000-00-00</a>
+        </li>
+        <li class="item">
+          <svg class="svg-img" width="30px" height="30px">
+            <use href="./images/sprite.svg#email"></use>
+          </svg>
+          Пошта:
+          <a class="link" href="maillto:queuelabtech@gmail.com"
+            >queuelabtech@gmail.com</a
+          >
+        </li>
+        <li class="item">
+          <svg class="svg-img" width="30px" height="30px">
+            <use href="./images/sprite.svg#telegram"></use>
+          </svg>
+          Telegram bot:
+          <a
+            class="link"
+            target="_blank"
+            href="https://telegram.me/queuelab_bot"
+            >@queuelab_bot</a
+          >
+        </li>
+      </ul>
+    </footer>
+    <script>
+      const { height: pageFooterHeight } = document
+        .querySelector(".footer")
+        .getBoundingClientRect();
+
+      document.body.style.paddingBottom = `${pageFooterHeight}px`;
+    </script>
+  </body>
+</html>

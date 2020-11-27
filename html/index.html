@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oleo+Script&family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
+    />
+    <link rel="stylesheet" href="./css/stylesIndex.css" />
+    <title>Queuelab</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="header">
+        <a href="./index.html" class="logo">QUEUELAB</a>
+        <ul class="list">
+          <li class="item">
+            <a href="./index.html" class="btn">Головна сторінка</a>
+          </li>
+          <li class="item">
+            <a href="./info-page.html" class="btn">Інформація</a>
+          </li>
+          <li class="item">
+            <a href="./auth.html" class="btn">Увійти</a>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <main class="main">
+      <div class="block">
+        <h1 class="hero">QUEUELAB</h1>
+        <p class="text">
+          Привіт, тут ти зможеш зайняти чергу на бажаний <br />
+          предмет та здати лабораторку вчасно!
+        </p>
+        <ul class="list">
+          <li class="item">
+            <a href="./auth.html" class="btn enter">Увійти</a>
+          </li>
+          <li class="item">
+            <a href="./info-page.html" class="btn more">Дізнатися більше</a>
+          </li>
+        </ul>
+      </div>
+    </main>
+    <footer class="footer">
+      <ul class="list">
+        <li class="item">
+          <svg class="svg-img" width="30px" height="30px">
+            <use href="./images/sprite.svg#phone"></use>
+          </svg>
+          Телефон: <a class="link" href="tel:+38000000000">+380(00)000-00-00</a>
+        </li>
+        <li class="item">
+          <svg class="svg-img" width="30px" height="30px">
+            <use href="./images/sprite.svg#email"></use>
+          </svg>
+          Пошта:
+          <a class="link" href="maillto:queuelabtech@gmail.com"
+            >queuelabtech@gmail.com</a
+          >
+        </li>
+        <li class="item">
+          <svg class="svg-img" width="30px" height="30px">
+            <use href="./images/sprite.svg#telegram"></use>
+          </svg>
+          Telegram bot:
+          <a
+            class="link"
+            target="_blank"
+            href="https://telegram.me/queuelab_bot"
+            >@queuelab_bot</a
+          >
+        </li>
+      </ul>
+    </footer>
+    <script>
+      const { height: pageFooterHeight } = document
+        .querySelector(".footer")
+        .getBoundingClientRect();
+
+      document.body.style.paddingBottom = `${pageFooterHeight}px`;
+    </script>
+  </body>
+</html>

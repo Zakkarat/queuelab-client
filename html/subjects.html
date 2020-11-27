@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oleo+Script&family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
+    />
+    <link rel="stylesheet" href="./css/stylesIndex.css" />
+    <link rel="stylesheet" href="./css/stylesSubjects.css" />
+    <title>Queuelab</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="header">
+        <a href="./index.html" class="logo">QUEUELAB</a>
+        <ul class="list">
+          <li class="item">
+            <a href="./account.html" class="btn"
+              ><svg class="home-img" width="19px" height="18px">
+                <use href="./images/sprite.svg#home"></use>
+              </svg>
+              Особистий кабінет</a
+            >
+          </li>
+          <li class="item">
+            <a href="./info-page.html" class="btn">Інформація</a>
+          </li>
+          <li class="item">
+            <a href="./index.html" class="btn">Вихід</a>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <main>
+      <section class="hi">
+        <img class="img" src="./images/pocherhach4.svg" alt="pocherhach4" />
+        <p class="text">
+          Тепер ти можеш переглянути або зайняти чергу на бажаний предмет на
+          найближчу дату! Для цього тобі лише необхідно обрати предмет та
+          натиснути кнопку “Переглянути чергу”!
+        </p>
+      </section>
+      <section class="choose-subj">
+        <p class="text">Предмети</p>
+        <div class="wrapper">
+          <select class="list">
+            <option class="item" value="" disabled selected>
+              Оберіть предмет..
+            </option>
+            <option class="item" value="ГДК">
+              Групова динаміка і комунікації
+            </option>
+            <option class="item" value="ІАД">Інформаційний аналіз даних</option>
+            <option class="item" value="ДО">Дослідження операцій - 1</option>
+            <option class="item" value="Англ. мова">Іноземна мова</option>
+            <option class="item" value="ПІС">
+              Проектування інформаційних систем
+            </option>
+            <option class="item" value="КМ">Комп'ютерні мережі</option>
+            <option class="item" value="ПІС">Проектування сховищ даних</option>
+          </select>
+          <svg class="svg-img" width="20px" height="20px">
+            <use href="./images/sprite.svg#down_arrow"></use>
+          </svg>
+        </div>
+        <button class="btn">
+          <a class="link" href="./queue.html">Переглянути чергу</a>
+        </button>
+      </section>
+      <section class="pocherhachs">
+        <img src="./images/pocherhach/1.svg" alt="1" class="poch" />
+        <img src="./images/pocherhach/2.svg" alt="2" class="poch" />
+        <img src="./images/pocherhach/3.svg" alt="3" class="poch" />
+        <img src="./images/pocherhach/4.svg" alt="4" class="poch" />
+        <img src="./images/pocherhach/5.svg" alt="5" class="poch" />
+        <img src="./images/pocherhach/6.svg" alt="6" class="poch" />
+        <img src="./images/pocherhach/7.svg" alt="7" class="poch" />
+      </section>
+
+      <p class="description">
+        Ми - велике сімейство Почергачей! У кожного з нас є велике призначення -
+        допомогти тобі у навчанні шляхом супроводу по чергам!
+      </p>
+    </main>
+
+    <footer class="footer">
+      <ul class="list">
+        <li class="item">
+          <svg class="svg-img" width="30px" height="30px">
+            <use href="./images/sprite.svg#phone"></use>
+          </svg>
+          Телефон:
+          <a target="_blank" class="link" href="tel:+38000000000"
+            >+380(00)000-00-00</a
+          >
+        </li>
+        <li class="item">
+          <svg class="svg-img" width="30px" height="30px">
+            <use href="./images/sprite.svg#email"></use>
+          </svg>
+          Пошта:
+          <a target="_blank" class="link" href="maillto:queuelabtech@gmail.com"
+            >queuelabtech@gmail.com</a
+          >
+        </li>
+        <li class="item">
+          <svg class="svg-img" width="30px" height="30px">
+            <use href="./images/sprite.svg#telegram"></use>
+          </svg>
+          Telegram bot:
+          <a
+            target="_blank"
+            class="link"
+            href="https://telegram.me/queuelab_bot"
+            >@queuelab_bot</a
+          >
+        </li>
+      </ul>
+    </footer>
+  </body>
+</html>
