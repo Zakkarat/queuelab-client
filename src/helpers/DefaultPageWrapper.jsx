@@ -1,6 +1,6 @@
 import Head from 'next/head'
 
-export default function Home() {
+export default function Home({children}) {
     return (
         <div>
             <Head>
@@ -14,10 +14,9 @@ export default function Home() {
                     rel="stylesheet"
                     href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
                 />
-                <link rel="stylesheet" href="./css/stylesIndex.css"/>
                 <title>Queuelab</title>
             </Head>
-
+            {children}
         </div>
     )
 }
