@@ -1,4 +1,6 @@
 import Head from 'next/head'
+import Header from "./Header";
+import Footer from "./Footer";
 
 export default function Home({children}) {
     return (
@@ -16,7 +18,9 @@ export default function Home({children}) {
                 />
                 <title>Queuelab</title>
             </Head>
+            <Header></Header>
             {children}
+            <Footer></Footer>
         </div>
     )
 }
