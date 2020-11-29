@@ -3,7 +3,7 @@ import Form from "../src/components/auth/Form";
 import {useRouter} from "next/router";
 
 
-const Auth = ({isAuthorized}) => {
+const Auth = ({isAuthorized, setIsAuthorized}) => {
     const router = useRouter();
     useEffect(() => {
         if (isAuthorized) {
@@ -24,7 +24,7 @@ const Auth = ({isAuthorized}) => {
                         тобі треба ввести свої дані та групу, щоб я міг знайти твій розклад.
                     </p>
                 </div>
-                <Form />
+                <Form isAuthorized={isAuthorized} setIsAuthorized={setIsAuthorized} />
             </div>
         </main>
     );

@@ -22,7 +22,7 @@ export default function Home({children}) {
                 <title>Queuelab</title>
             </Head>
             <Header isAuthorized={isAuthorized} setIsAuthorized={setIsAuthorized}/>
-            {children(isAuthorized)}
+            {children(isAuthorized, setIsAuthorized)}
             <Footer/>
         </div>
     )

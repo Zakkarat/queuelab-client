@@ -5,7 +5,7 @@ const Header = ({isAuthorized, setIsAuthorized}) => {
     return (
         <header>
             <div className="header">
-                    <a onClick={() => setIsAuthorized(!isAuthorized)} className="logo">QUEUELAB</a>
+                <a onClick={() => setIsAuthorized(!isAuthorized)} className="logo">QUEUELAB</a>
                 <ul className="list">
                     {isAuthorized ? <li className="item">
                             <a href="/account" className="btn"
@@ -31,9 +31,11 @@ const Header = ({isAuthorized, setIsAuthorized}) => {
                     {isAuthorized ?
                         <>
                             <li className="item">
-                                <a href="./subjects.html" className="btn">Переглянути чергу</a>
+                                <Link href="/subjects">
+                                    <a className="btn">Переглянути чергу</a>
+                                </Link>
                             </li>
-                            <li className="item"><a href="./index.html" className="btn">Вихід</a></li>
+                            <li className="item"><a onClick={() => setIsAuthorized(!isAuthorized)} className="btn">Вихід</a></li>
                         </>
                         :
                         <li className="item">

@@ -28,7 +28,7 @@ const Info = ({isAuthorized}) => {
             </div>
         </section>
 
-        <DeveloperList></DeveloperList>
+        <DeveloperList/>
     </main>
     );
 };

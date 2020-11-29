@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from "next/link";
 
-const Form = () => {
+const Form = ({isAuthorized, setIsAuthorized}) => {
     return (
         <form className="form">
             <label className="form-field">
@@ -47,7 +47,10 @@ const Form = () => {
                     Забули пароль?
                 </a>
                 <Link href="/account">
-                <button type="submit" className="btn">
+                <button onClick={(e) => {
+                    e.preventDefault();
+                    setIsAuthorized(!isAuthorized)
+                }} type="submit" className="btn">
                     <a className="link">Увійти</a>
                 </button>
                 </Link>
