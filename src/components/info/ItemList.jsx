@@ -12,11 +12,14 @@ const ItemList = ({styledWith, isAuthorized}) => {
             setList([...bars['kpi-links'], bars["sites"][3]])
         }
         if (styledWith === 'sites' && !isAuthorized) {
-            const newList = [...list];
+            const newList = [...bars[styledWith]];
             newList.pop();
-            setList(newList);
+            setList([...newList]);
+        } else if (styledWith === 'sites' && isAuthorized) {
+            const newList = [...bars[styledWith]];
+            setList([...newList]);
         }
-    }, [])
+    }, [isAuthorized])
 
     return (
         <ul className={styledWith}>

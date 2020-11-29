@@ -1,7 +1,10 @@
 import React from 'react';
 import SubjectList from "../src/components/account/SubjectList";
+import subjectInfo from "../src/libs/account/api/subjects.json"
+import useProtected from "../src/utils/useProtected";
 
-const Account = () => {
+const Account = (isAuthorized) => {
+    useProtected(isAuthorized)
     return (
         <main>
             <div className="flex">
@@ -12,7 +15,7 @@ const Account = () => {
                         alt="pocherhachRight"
                     />
                     <p className="text">
-                        "Ім’я користувача", я дуже радий знову тебе бачити! Нагадаю, що ти
+                        {subjectInfo.firstName}, я дуже радий знову тебе бачити! Нагадаю, що ти
                         можеш зайняти чергу для здачі робіт, натиснувши на кнопку “Зайняти
                         чергу” у верхньому правому куті цієї сторінки.
                     </p>
@@ -26,7 +29,7 @@ const Account = () => {
                 </section>
             </div>
 
-            <SubjectList />
+            <SubjectList subjects={subjectInfo.subjects} />
         </main>
     );
 };

@@ -1,13 +1,12 @@
 import React from 'react';
-import {subjects} from "../../libs/account/api/subjects.json"
 import Subject from "./Subject";
 
-const SubjectList = () => {
+const SubjectList = ({subjects}) => {
     return (
         <section className="sectionMain">
             <button className="left">
                 <svg className="svg-img" width="18.26px" height="30px">
-                    <use href="./images/sprite.svg#l_arrow"></use>
+                    <use href="./images/sprite.svg#l_arrow"/>
                 </svg>
             </button>
         <ul className="list">
@@ -15,7 +14,7 @@ const SubjectList = () => {
         </ul>
             <button disabled className="right">
                 <svg className="svg-img" width="18.26px" height="30px">
-                    <use href="./images/sprite.svg#r_arrow"></use>
+                    <use href="./images/sprite.svg#r_arrow"/>
                 </svg>
             </button>
         </section>

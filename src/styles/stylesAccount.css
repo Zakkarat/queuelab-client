@@ -4,6 +4,7 @@
 .home-img {
   position: relative;
   transform: translateY(10%);
+  margin-right: 7px;
 }
 .flex {
   display: flex;

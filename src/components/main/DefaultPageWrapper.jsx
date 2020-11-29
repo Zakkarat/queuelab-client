@@ -1,8 +1,11 @@
 import Head from 'next/head'
 import Header from "./Header";
 import Footer from "./Footer";
+import {useState} from "react";
 
 export default function Home({children}) {
+    const [isAuthorized, setIsAuthorized] = useState(true);
+
     return (
         <div>
             <Head>
@@ -18,9 +21,9 @@ export default function Home({children}) {
                 />
                 <title>Queuelab</title>
             </Head>
-            <Header></Header>
-            {children}
-            <Footer></Footer>
+            <Header isAuthorized={isAuthorized} setIsAuthorized={setIsAuthorized}/>
+            {children(isAuthorized)}
+            <Footer/>
         </div>
     )
 }

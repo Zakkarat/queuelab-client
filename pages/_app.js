@@ -6,7 +6,7 @@ import '../src/styles/stylesAccount.css'
 
 
 function MyApp({ Component, pageProps }) {
-  return <DefaultPageWrapper><Component {...pageProps} /></DefaultPageWrapper>
+  return <DefaultPageWrapper>{(isAuthorized) => <Component {...pageProps} isAuthorized={isAuthorized} />}</DefaultPageWrapper>
 }
 
 export default MyApp
