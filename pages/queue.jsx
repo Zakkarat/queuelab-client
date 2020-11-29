@@ -1,10 +1,22 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import TableRows from "../src/components/Queue/TableRows";
+import useProtected from "../src/utils/useProtected";
+import {useRouter} from "next/router";
+import {options} from '../src/libs/subjects/api/options.json'
 
-const Queue = () => {
+const Queue = (isAuthorized) => {
+    useProtected(isAuthorized)
+
+    const router = useRouter();
+    const [subject, setSubject] = useState('');
+    useEffect(() => {
+        const searchedSubject = router.query.subject;
+        const subject = options.filter(subject => subject.value === searchedSubject)[0];
+        setSubject(subject.name)
+    }, [subject])
     return (
         <main className="queue">
-            <h1 className="title">Черга на "назва предмету"</h1>
+            <h1 className="title">Черга на {subject}</h1>
 
             <div className="scrollable">
                 <table className="table">

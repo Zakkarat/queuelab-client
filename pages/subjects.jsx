@@ -1,11 +1,24 @@
-import React from 'react';
+import React, {useState} from 'react';
 import useProtected from "../src/utils/useProtected";
 import Pocherhach from "../src/components/subjects/Pocherhach";
 import OptionList from "../src/components/subjects/OptionList";
-import Link from "next/link";
+import {useRouter} from "next/router";
 
 const Subjects = (isAuthorized) => {
     useProtected(isAuthorized);
+
+    const router = useRouter();
+    const [selectedValue, setSelectedValue] = useState('');
+
+    const onSelectChange = (e) => {
+        setSelectedValue(e.target.value)
+    }
+
+    const handleSubmit = () => {
+        if(selectedValue !== '') {
+            router.replace(`/queue?subject=${selectedValue}`)
+        }
+    }
     return (
         <main>
             <section className="hi">
@@ -19,7 +32,7 @@ const Subjects = (isAuthorized) => {
             <section className="choose-subj">
                 <p className="text">Предмети</p>
                 <div className="wrapper">
-                    <select className="list">
+                    <select value={selectedValue} onChange={onSelectChange} className="list">
                         <option className="item" value="" disabled selected>
                             Оберіть предмет..
                         </option>
@@ -29,11 +42,9 @@ const Subjects = (isAuthorized) => {
                         <use href="./images/sprite.svg#down_arrow"/>
                     </svg>
                 </div>
-                <Link href="/queue">
-                    <button className="btn">
+                    <button onClick={handleSubmit} className="btn">
                         <a className="link">Переглянути чергу</a>
                     </button>
-                </Link>
             </section>
             <section className="pocherhachs">
                 {new Array(7).fill('').map((_, i) => <Pocherhach key={i} number={i + 1}/>)}
