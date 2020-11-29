@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from "next/link";
 
 const Form = () => {
     return (
@@ -45,10 +46,11 @@ const Form = () => {
                     </svg>
                     Забули пароль?
                 </a>
-
+                <Link href="/account">
                 <button type="submit" className="btn">
-                    <a href="./account.html" className="link">Увійти</a>
+                    <a className="link">Увійти</a>
                 </button>
+                </Link>
             </div>
         </form>
     );

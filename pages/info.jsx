@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import ItemList from "../src/components/info/ItemList";
+import DeveloperList from "../src/components/info/DeveloperList";
 
 const Info = () => {
     const [isAuthorized, setIsAuthorized] = useState(false);
@@ -29,35 +30,7 @@ const Info = () => {
                 </div>
             </section>
 
-            <section className="down">
-                <h1 className="devs">Розробники</h1>
-                <ul className="dev-list">
-                    <li className="item">
-                        <img className="img" src="./images/info-page/andrew.png" alt="andrew"/>
-                        <p className="text">Андрій Бершадський</p>
-                    </li>
-                    <li className="item">
-                        <img
-                            className="img"
-                            src="./images/info-page/natasha.png"
-                            alt="natasha"
-                        />
-                        <p className="text">Наталія Бишовець</p>
-                    </li>
-                    <li className="item">
-                        <img className="img" src="./images/info-page/vika.png" alt="vika"/>
-                        <p className="text">Вікторія Власенко</p>
-                    </li>
-                    <li className="item">
-                        <img className="img" src="./images/info-page/stas.png" alt="nastya"/>
-                        <p className="text">Анастасія Лапа</p>
-                    </li>
-                    <li className="item">
-                        <img className="img" src="./images/info-page/sasha.png" alt="sasha"/>
-                        <p className="text">Олександр Якубовський</p>
-                    </li>
-                </ul>
-            </section>
+            <DeveloperList></DeveloperList>
         </main>
     );
 };
