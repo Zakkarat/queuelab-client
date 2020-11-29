@@ -1,0 +1,14 @@
+{
+  "api": [
+    {
+      "name": "Телеграм твоєї групи",
+      "href": "https://t.me/joinchat/AAAAAFcdEwNZp7z_8F7kRg",
+      "svg": "telegram"
+    },
+    {
+      "name": "Телеграм твого старости",
+      "href": "https://t.me/kapitoshka_b",
+      "svg": "smile"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "sites": [
+  {
+    "name": "Офіційний сайт “КПІ”",
+    "href": "https://kpi.ua/",
+    "svg": "site"
+  },
+  {
+    "name": "Moodle",
+    "href": "https://do.ipo.kpi.ua/",
+    "svg": "site"
+  },
+  {
+    "name": "Електронний кампус КПІ",
+    "href": "https://ecampus.kpi.ua",
+    "svg": "site"
+  },
+  {
+    "name": "Бібліотека “КПІ”",
+    "href": "https://kpi.ua/",
+    "svg": "library"
+  }
+],
+  "kpi-links": [
+    {
+      "name": "Розклад занять",
+      "href": "http://rozklad.kpi.ua/Schedules/ScheduleGroupSelection.aspx",
+      "svg": "schedule"
+    },
+    {
+      "name": "Пошта \"КПІ\"",
+      "href": "https://mail.kpi.ua/roundcube/",
+      "svg": "email"
+    }
+  ]
+}
