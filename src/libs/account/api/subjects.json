@@ -1,0 +1,46 @@
+{
+  "subjects": [
+    {
+      "name": "Групова динаміка і комунікації",
+      "href": "https://t.me/communications_is81",
+      "image": "sub1",
+      "alt": "ГДК"
+    },
+    {
+      "name": "Інформаційний аналіз даних",
+      "href": "",
+      "image": "sub2",
+      "alt": "ІАД"
+    },
+    {
+      "name": "Дослідження операцій - 1",
+      "href": "https://t.me/OperationResearchIS8x",
+      "image": "sub3",
+      "alt": "ДО"
+    },
+    {
+      "name": "Іноземна мова",
+      "href": "",
+      "image": "sub4",
+      "alt": "Англ. мова"
+    },
+    {
+      "name": "Проектування інформ. систем",
+      "href": "https://t.me/PIS_Popenko",
+      "image": "sub5",
+      "alt": "ПІС"
+    },
+    {
+      "name": "Комп'ютерні мережі",
+      "href": "https://t.me/arch_fict_is8x",
+      "image": "sub7",
+      "alt": "КМ"
+    },
+    {
+      "name": "Проектування сховищ даних",
+      "href": "https://t.me/asoiu_8x_OLAP",
+      "image": "sub8",
+      "alt": "OLAP"
+    }
+  ]
+}
