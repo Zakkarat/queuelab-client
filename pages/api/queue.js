@@ -28,7 +28,6 @@ let newOptions = options.map(elem => {
 export default (req, res) => {
     if(req.method === 'POST') {
         newOptions = newOptions.map(elem => {
-            console.log(elem.value === req.body.value)
             if(elem.value === req.body.value) {
                 const date = new Date();
                 elem.queue.push({name: req.body.name, date: `${date.getHours()}:${date.getMinutes()} ${date.getDate()}.${date.getMonth() + 1}.${date.getFullYear()}`})
