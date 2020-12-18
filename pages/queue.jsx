@@ -8,16 +8,30 @@ const Queue = (isAuthorized) => {
     useProtected(isAuthorized)
 
     const router = useRouter();
-    const [subject, setSubject] = useState('');
+    const [subject, setSubject] = useState({});
+    const [isTaken, setIsTaken] = useState(false)
     useEffect(() => {
         const searchedSubject = router.query.subject;
-        const subject = options.filter(subject => subject.value === searchedSubject)[0];
-        setSubject(subject.name)
+        const fetchUsers = async () => await fetch('/api/queue').then(async res => await res.json())
+            .then(data => {
+                const subject = data.options.filter(subject => subject.value === searchedSubject)[0];
+                setSubject(subject)
+                if(subject.queue.some(elem => elem.name === "Бишовець Наталія")) {
+                    setIsTaken(true);
+                }
+            });
+        fetchUsers();
     }, [subject])
+
+    const handleSubmit = () => {
+        fetch('/api/queue', {method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ name: "Бишовець Наталія", value: subject.value }),  })
+    }
+
     return (
         <main className="queue">
-            <h1 className="title">Черга на {subject}</h1>
-
+            <h1 className="title">Черга на {subject && subject.name}</h1>
             <div className="scrollable">
                 <table className="table">
                     <tr className="height">
@@ -25,7 +39,7 @@ const Queue = (isAuthorized) => {
                         <th className="title">Прізвище Ім'я</th>
                         <th className="title">Дата і час</th>
                     </tr>
-                    <TableRows/>
+                    <TableRows queue={subject && subject.queue} />
                 </table>
             </div>
             <div className="wrapper-queue">
@@ -40,7 +54,7 @@ const Queue = (isAuthorized) => {
                         у чергу та здав свою лабораторку вчасно!
                     </p>
                 </div>
-                <button className="btn">Зайняти чергу</button>
+                <button onClick={isTaken ? () => {} : handleSubmit} className="btn">{isTaken ? "Ви вже заняли чергу"  : "Зайняти чергу"}</button>
             </div>
         </main>
     );

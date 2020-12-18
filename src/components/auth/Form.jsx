@@ -3,6 +3,8 @@ import Link from "next/link";
 
 const Form = ({isAuthorized, setIsAuthorized}) => {
     const [pass, setPass] = useState('')
+    const [isError, setIsError] = useState(false)
+
     return (
         <form className="form">
             <label className="form-field">
@@ -40,6 +42,7 @@ const Form = ({isAuthorized, setIsAuthorized}) => {
               ><input className="form-input" onChange={({target}) => setPass(target.value)} value={pass} type="password" name="password"/></div
                 >
             </label>
+            {isError && <p className='error'>Дані введені невірно</p>}
             <div className="flex-down">
                 <a href="" className="pas">
                     <svg className="svg-img" width="30px" height="30px">
@@ -52,6 +55,8 @@ const Form = ({isAuthorized, setIsAuthorized}) => {
                     e.preventDefault();
                     if (pass === 'verySecret') {
                         setIsAuthorized(!isAuthorized)
+                    } else {
+                        setIsError(true);
                     }
                 }} type="submit" className="btn">
                     <a className="link">Увійти</a>
