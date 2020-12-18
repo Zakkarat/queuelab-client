@@ -4,7 +4,7 @@ import Footer from "./Footer";
 import {useState} from "react";
 
 export default function Home({children}) {
-    const [isAuthorized, setIsAuthorized] = useState(true);
+    const [isAuthorized, setIsAuthorized] = useState(false);
 
     return (
         <div>
