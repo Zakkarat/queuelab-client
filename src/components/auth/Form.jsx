@@ -1,7 +1,8 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Link from "next/link";
 
 const Form = ({isAuthorized, setIsAuthorized}) => {
+    const [pass, setPass] = useState('')
     return (
         <form className="form">
             <label className="form-field">
@@ -36,7 +37,7 @@ const Form = ({isAuthorized, setIsAuthorized}) => {
             <label className="form-field">
                 <div className="form-flex">
               <span className="form-label">Пароль</span
-              ><input className="form-input" type="password" name="password"/></div
+              ><input className="form-input" onChange={({target}) => setPass(target.value)} value={pass} type="password" name="password"/></div
                 >
             </label>
             <div className="flex-down">
@@ -49,7 +50,9 @@ const Form = ({isAuthorized, setIsAuthorized}) => {
                 <Link href="/account">
                 <button onClick={(e) => {
                     e.preventDefault();
-                    setIsAuthorized(!isAuthorized)
+                    if (pass === 'verySecret') {
+                        setIsAuthorized(!isAuthorized)
+                    }
                 }} type="submit" className="btn">
                     <a className="link">Увійти</a>
                 </button>

@@ -5,7 +5,7 @@ const Header = ({isAuthorized, setIsAuthorized}) => {
     return (
         <header>
             <div className="header">
-                <a onClick={() => setIsAuthorized(!isAuthorized)} className="logo">QUEUELAB</a>
+                <a className="logo">QUEUELAB</a>
                 <ul className="list">
                     {isAuthorized ? <li className="item">
                             <a href="/account" className="btn"
